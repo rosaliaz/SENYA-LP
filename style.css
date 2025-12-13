@@ -279,6 +279,81 @@ a{
     pointer-events: none;
 }
 
+/* Acknowledgment Section */
+#acknowledge{
+    padding: 80px 40px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acknowledgment-section {
+    background: linear-gradient(135deg, #FF7904 0%, #FFE4B5 100%);
+    border-radius: 25px;
+    padding: 50px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.acknowledgment-section h3 {
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Tutor Card */
+.tutor-card {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutor-image {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #FF7904;
+    box-shadow: 0 8px 20px rgba(255, 121, 4, 0.25);
+}
+
+.tutor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tutor-info {
+    text-align: left;
+    flex: 1;
+}
+
+.tutor-info h4 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.tutor-title {
+    font-size: 18px;
+    color: #FF7904;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tutor-message {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
 
 /* footer section */
 
@@ -361,5 +436,23 @@ footer p:last-child {
     }
     .home img {
         width: 250px;
+    }
+
+    .tutor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tutor-info {
+        text-align: center;
+    }
+
+    .acknowledgment-section {
+        padding: 40px 20px;
+    }
+
+    .tutor-image {
+        width: 150px;
+        height: 150px;
     }
 }
