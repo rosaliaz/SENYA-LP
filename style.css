@@ -13,7 +13,7 @@ html{
 
 header {
     padding: 20px 40px;
-    background: #ff790423;
+    background: #ff9f4ce7;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -170,6 +170,7 @@ a{
     margin: 0 auto;
     display: block;
     background-color: #FFF6DF;
+    
 }
 .features img{
     width: 85%;
@@ -314,22 +315,6 @@ a{
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.tutor-image {
-    flex-shrink: 0;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #FF7904;
-    box-shadow: 0 8px 20px rgba(255, 121, 4, 0.25);
-}
-
-.tutor-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .tutor-info {
     text-align: left;
     flex: 1;
@@ -354,6 +339,169 @@ a{
     color: #555;
 }
 
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TikTok */
+.social-icon.tiktok {
+    background: linear-gradient(135deg, #000000,  #c13584, #00f2ea);
+    color: white;
+}
+
+.social-icon.tiktok:hover {
+    background: linear-gradient(135deg, #00f2ea, #ff0050);
+}
+
+/* Instagram */
+.social-icon.instagram {
+    background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d);
+}
+
+
+
+/*Our Team Section */
+.our-team {
+    padding: 80px 40px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    max-width: 1400px;
+    text-align: center;
+}
+
+.team-logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.our-team h2 {
+    color: #FF7904;
+    font-size: 42px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.our-team h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #FF7904;
+    border-radius: 2px;
+}
+
+.team-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 700px;
+    margin: 30px auto 60px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+/* Team Card */
+.team-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FF7904, #FFA500);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover::before {
+    transform: scaleX(1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 121, 4, 0.15);
+}
+
+/* Team Image */
+.team-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #FF7904;
+    box-shadow: 0 5px 15px rgba(255, 121, 4, 0.2);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.1);
+}
+
+.team-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.team-card .role {
+    font-size: 16px;
+    color: #FF7904;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
 
 /* footer section */
 
@@ -373,8 +521,6 @@ footer img{
     height: auto;
     margin-bottom: 10px;
 }
-
-
 
 footer p:last-child {
     margin-top: 10px;
@@ -424,9 +570,12 @@ footer p:last-child {
     100% { transform: translateY(0px); }
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .home {
         padding: 70px 20px;
@@ -454,5 +603,12 @@ footer p:last-child {
     .tutor-image {
         width: 150px;
         height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
     }
 }
